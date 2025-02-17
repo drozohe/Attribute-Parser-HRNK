@@ -3,7 +3,8 @@
         "*.cpp": "cpp",
         "*.h": "cpp",
         "__config": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "vector": "cpp"
     },
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }
