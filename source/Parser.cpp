@@ -1,6 +1,6 @@
 #include "Parser.h"
 #include <regex>
-
+using namespace std;
 
 Parser::Parser() : builder(make_unique<Builder>())
 {
@@ -11,7 +11,6 @@ vector<Attribute> Parser::getAttributes(std::string const &input) const
     std::vector<Attribute> attributes;
 
     std::regex pattern(R"(\b([\w-]+)\s*=\s*\"([^\"]*)\")");
-
     std::sregex_iterator it(input.begin(), input.end(), pattern);
     std::sregex_iterator end;
 

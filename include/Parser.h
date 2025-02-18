@@ -6,12 +6,12 @@
 class Parser
 {
 private:
-    unique_ptr<Builder> builder;
+    std::unique_ptr<Builder> builder;
 
 public:
     Parser();
 
-    vector<Attribute> getAttributes(std::string const &input) const;
-    void parse(string const &line);
-    string query(string const &query) const;
+    std::vector<Attribute> getAttributes(std::string const &input) const;
+    void parse(std::string const &line);
+    std::string query(std::string const &query) const;
 };

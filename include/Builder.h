@@ -3,44 +3,40 @@
 #include <iostream>
 #include <memory>
 #include <vector>
-
-using namespace std;
 struct Attribute
 {
-    string key;
-    string value;
+    std::string key;
+    std::string value;
 };
 
 struct Element
 {
     std::vector<Attribute> attributes;
-    string tagName;
-    string parentName;
-    string fullPath;
-    shared_ptr<Element> parent = nullptr;
-    std::vector<shared_ptr<Element>> childElement;
-    Element();
-    Element(const std::string &name, const std::string &text);
+    std::string tagName;
+    std::string parentName;
+    std::string fullPath;
+    std::shared_ptr<Element> parent = nullptr;
+    std::vector<std::shared_ptr<Element>> childElement;
+    Element() = default;
 };
 
 class Builder
 {
 public:
-    unordered_map<string, Attribute> elementsIndex;
+    std::unordered_map<std::string, Attribute> elementsIndex;
 
     Builder();
     void addElement(std::string const &tagName, std::vector<Attribute> const &attributes);
-    void addElementInfoToIndex(shared_ptr<Element> element);
-    shared_ptr<Element> getRoot() const;
-    shared_ptr<Element> getCurrentParent() const;
-    shared_ptr<Element> getPreviousParent() const;
+    void addElementInfoToIndex(std::shared_ptr<Element> element);
+    std::shared_ptr<Element> getRoot() const;
+    std::shared_ptr<Element> getCurrentParent() const;
+    std::shared_ptr<Element> getPreviousParent() const;
     void closeParent();
-    
 
 private:
-    shared_ptr<Element> mRoot;
-    shared_ptr<Element> mCurrentParent;
-    shared_ptr<Element> mPreviousParent;
+    std::shared_ptr<Element> mRoot;
+    std::shared_ptr<Element> mCurrentParent;
+    std::shared_ptr<Element> mPreviousParent;
 
-    void setParent(shared_ptr<Element> element);
+    void setParent(std::shared_ptr<Element> element);
 };
