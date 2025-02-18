@@ -1,9 +1,10 @@
+#pragma once
 #include <unordered_map>
 #include <iostream>
 #include <memory>
+#include <vector>
 
 using namespace std;
-
 struct Attribute
 {
     string key;
