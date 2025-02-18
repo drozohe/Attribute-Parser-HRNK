@@ -22,19 +22,19 @@ You can find the full problem description on HackerRank: [Attribute Parser](http
 For each query, print the value of the attribute if it exists, or "Not Found!" if it does not.
 
 ## Example
-4 3 
-<a value = "GoodVal">
-<b value = "BadVal" size = "10">
-</b>
-</a> 
-a~value 
-a.b~size 
-a.b~value
+`4 3`
+`<a value = "GoodVal">`
+`<b value = "BadVal" size = "10">`
+`</b>`
+`</a>`
+`a~value`
+`a.b~size`
+`a.b~value`
 
 ### Output
-GoodVal
-10
-BadVal
+`GoodVal`
+`10`
+`BadVal`
 
 ## Project Structure
 
